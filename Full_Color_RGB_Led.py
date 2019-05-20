@@ -14,9 +14,9 @@ GPIO.setup(R_pin, GPIO.OUT)
 GPIO.setup(G_pin, GPIO.OUT)
 GPIO.setup(B_pin, GPIO.OUT)
 
-R_pwm = GPIO.PWM(R_pin, 500)
-G_pwm = GPIO.PWM(G_pin, 500)
-B_pwm = GPIO.PWM(B_pin, 500)
+R_pwm = GPIO.PWM(R_pin, 800)
+G_pwm = GPIO.PWM(G_pin, 800)
+B_pwm = GPIO.PWM(B_pin, 800)
 # use python RPi.GPIO, square wave is 70k Hz
 # use python wiringpi2 or bindings, square wave is 28k Hz
 # use C wiringPi, square wave is 4.1-4.6M Hz
