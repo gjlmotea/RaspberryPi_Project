@@ -32,12 +32,6 @@ def check_RGB_range(R,G,B):
     
     return R,G,B
 
-
-def mapping(x):
-    x = int (x / 255 * 100)
-    
-    return x
-
 R,G,B = 255,255,255
 state = 0
 interval = 8
