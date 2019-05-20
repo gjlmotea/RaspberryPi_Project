@@ -3,7 +3,9 @@ import RPi.GPIO as GPIO
 
 
 GPIO.setmode(GPIO.BOARD)
-
+# R: 33號腳位(第33根pin)
+# G: 35號腳位(第35根pin)
+# B: 37號腳位(第37根pin)
 R_pin = 33
 G_pin = 35
 B_pin = 37
@@ -11,13 +13,10 @@ B_pin = 37
 GPIO.setup(R_pin, GPIO.OUT)
 GPIO.setup(G_pin, GPIO.OUT)
 GPIO.setup(B_pin, GPIO.OUT)
-GPIO.output(R_pin, 0)
-GPIO.output(G_pin, 0)
-GPIO.output(B_pin, 0)
 
-R_pwm = GPIO.PWM(R_pin, 50)
-G_pwm = GPIO.PWM(G_pin, 50)
-B_pwm = GPIO.PWM(B_pin, 50)
+R_pwm = GPIO.PWM(R_pin, 500)
+G_pwm = GPIO.PWM(G_pin, 500)
+B_pwm = GPIO.PWM(B_pin, 500)
 # use python RPi.GPIO, square wave is 70k Hz
 # use python wiringpi2 or bindings, square wave is 28k Hz
 # use C wiringPi, square wave is 4.1-4.6M Hz
